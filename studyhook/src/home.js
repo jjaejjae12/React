@@ -6,6 +6,8 @@ export default function Home() {
             <Link to={`/HookUseState`}>useState</Link>
             <Link to={`/HookUseInput`}>useInput</Link>
             <Link to={`/HookUseTabs`}>useTabs</Link>
+            <Link to={`/HookUseEffect`}>useEffect</Link>
+            <Link to={`/HookUseTitle`}>HookUseTitle</Link>
         </div>
     )
 }

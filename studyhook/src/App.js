@@ -7,6 +7,8 @@ import Home from "./home";
 import HookUseInput from "./hook/hookUseInput";
 import HookUseState from "./hook/hookUseState";
 import HookUseTabs from "./hook/hookUseTabs"
+import HookUseEffect from "./hook/hookUseEffect";
+import HookUseTitle from "./hook/hookUseTitle";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/HookUseState" element={<HookUseState />} />
         <Route path="/HookUseInput" element={<HookUseInput />} />
         <Route path="/HookUseTabs" element={<HookUseTabs />} />
+        <Route path="/HookUseEffect" element={<HookUseEffect />} />
+        <Route path="/HookUseTitle" element={<HookUseTitle />} />
       </Routes>
     </BrowserRouter>
   );
