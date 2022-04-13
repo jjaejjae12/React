@@ -8,6 +8,9 @@ export default function Home() {
             <Link to={`/HookUseTabs`}>useTabs</Link>
             <Link to={`/HookUseEffect`}>useEffect</Link>
             <Link to={`/HookUseTitle`}>HookUseTitle</Link>
+            <Link to={`/HookUseClick`}>HookUseClick</Link>
+            <Link to={`/HookUsePreventLeave`}>HookUsePreventLeave</Link>
+            <Link to={`/HookUseConfirm`}>HookUseConfirm</Link>
         </div>
     )
 }

@@ -9,6 +9,9 @@ import HookUseState from "./hook/hookUseState";
 import HookUseTabs from "./hook/hookUseTabs"
 import HookUseEffect from "./hook/hookUseEffect";
 import HookUseTitle from "./hook/hookUseTitle";
+import HookUseClick from "./hook/hookUseClick";
+import HookUsePreventLeave from "./hook/hookUsePreventLeave";
+import HookUseConfirm from "./hook/hookUse";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="/HookUseTabs" element={<HookUseTabs />} />
         <Route path="/HookUseEffect" element={<HookUseEffect />} />
         <Route path="/HookUseTitle" element={<HookUseTitle />} />
+        <Route path="/HookUseClick" element={<HookUseClick />} />
+        <Route path="/HookUsePreventLeave" element={<HookUsePreventLeave />} />
+        <Route path="/HookUseConfirm" element={<HookUseConfirm />} />
       </Routes>
     </BrowserRouter>
   );
