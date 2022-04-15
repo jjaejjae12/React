@@ -11,6 +11,9 @@ export default function Home() {
             <Link to={`/HookUseClick`}>HookUseClick</Link>
             <Link to={`/HookUsePreventLeave`}>HookUsePreventLeave</Link>
             <Link to={`/HookUseConfirm`}>HookUseConfirm</Link>
+            <Link to={`/HookUseBeforLeave`}>HookUseBeforLeave</Link>
+            <Link to={`/HookUseFadeIn`}>HookUseFadeIn</Link>
+            <Link to={`/HookUseNetwork`}>HookUseNetwork</Link>
         </div>
     )
 }

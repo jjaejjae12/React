@@ -12,6 +12,9 @@ import HookUseTitle from "./hook/hookUseTitle";
 import HookUseClick from "./hook/hookUseClick";
 import HookUsePreventLeave from "./hook/hookUsePreventLeave";
 import HookUseConfirm from "./hook/hookUse";
+import HookUseBeforLeave from "./hook/hookUseBeforLeave";
+import HookUseFadeIn from "./hook/hookUseFadeIn";
+import HookUseNetwork from "./hook/hookUseNetwork";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path="/HookUseClick" element={<HookUseClick />} />
         <Route path="/HookUsePreventLeave" element={<HookUsePreventLeave />} />
         <Route path="/HookUseConfirm" element={<HookUseConfirm />} />
+        <Route path="/HookUseBeforLeave" element={<HookUseBeforLeave />} />
+        <Route path="/HookUseFadeIn" element={<HookUseFadeIn />} />
+        <Route path="/HookUseNetwork" element={<HookUseNetwork />} />
       </Routes>
     </BrowserRouter>
   );
