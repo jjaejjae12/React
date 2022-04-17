@@ -15,6 +15,7 @@ export default function Home() {
             <Link to={`/HookUseFadeIn`}>HookUseFadeIn</Link>
             <Link to={`/HookUseNetwork`}>HookUseNetwork</Link>
             <Link to={`/HookUseScroll`}>HookUseScroll</Link>
+            <Link to={`/HookUseFullScreen`}>HookUseFullScreen</Link>
         </div>
     )
 }

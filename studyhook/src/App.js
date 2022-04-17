@@ -16,6 +16,7 @@ import HookUseBeforLeave from "./hook/hookUseBeforLeave";
 import HookUseFadeIn from "./hook/hookUseFadeIn";
 import HookUseNetwork from "./hook/hookUseNetwork";
 import HookUseScroll from "./hook/hookUseScroll";
+import HookUseFullScreen from "./hook/hookUseFullScreen";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/HookUseFadeIn" element={<HookUseFadeIn />} />
         <Route path="/HookUseNetwork" element={<HookUseNetwork />} />
         <Route path="/HookUseScroll" element={<HookUseScroll />} />
+        <Route path="/HookUseFullScreen" element={<HookUseFullScreen />} />
       </Routes>
     </BrowserRouter>
   );
