@@ -17,6 +17,7 @@ import HookUseFadeIn from "./hook/hookUseFadeIn";
 import HookUseNetwork from "./hook/hookUseNetwork";
 import HookUseScroll from "./hook/hookUseScroll";
 import HookUseFullScreen from "./hook/hookUseFullScreen";
+import HookUseNotification from "./hook/hookUseNotification";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/HookUseNetwork" element={<HookUseNetwork />} />
         <Route path="/HookUseScroll" element={<HookUseScroll />} />
         <Route path="/HookUseFullScreen" element={<HookUseFullScreen />} />
+        <Route path="/HookUseNotification" element={<HookUseNotification />} />
       </Routes>
     </BrowserRouter>
   );
