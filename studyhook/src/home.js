@@ -17,6 +17,7 @@ export default function Home() {
             <Link to={`/HookUseScroll`}>HookUseScroll</Link>
             <Link to={`/HookUseFullScreen`}>HookUseFullScreen</Link>
             <Link to={`/HookUseNotification`}>HookUseNotification</Link>
+            <Link to={`/HookUseAxios`}>HookUseAxios</Link>
         </div>
     )
 }
