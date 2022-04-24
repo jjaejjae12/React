@@ -10,7 +10,7 @@ function App() {
     authService.onAuthStateChanged((user) => {
       if (user) {
         setIsLoggedIn(true);
-        setUserObj(user)
+        setUserObj(user) 
       } else {
         setIsLoggedIn(false)
       }
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} /> : "Initializing..."}
+      {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} setUserObj={setUserObj} /> : "Initializing..."}
       <footer>&copy;{new Date().getFullYear()} Nwitter</footer>
     </>
   )
