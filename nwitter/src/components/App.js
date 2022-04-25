@@ -21,7 +21,6 @@ function App() {
   return (
     <>
       {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} setUserObj={setUserObj} /> : "Initializing..."}
-      <footer>&copy;{new Date().getFullYear()} Nwitter</footer>
     </>
   )
 }
