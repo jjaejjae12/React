@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { dbService, storageService } from "fbase";
 import { set } from "firebase/database";
 import { addDoc, collection, getDocs, query, onSnapshot, orderBy } from "firebase/firestore";
-import { ref, uploadString } from "@firebase/storage";
+import { ref, uploadString, getDownloadURL } from "@firebase/storage";
 import React, { useEffect, useState } from "react";
 
 const Home = ({ userObj }) => {
@@ -25,20 +25,26 @@ const Home = ({ userObj }) => {
         });
     }, []);
     const onSubmit = async (event) => {
-        event.preventDefault(); 
-        const fileRef = ref(storageService, `${userObj.uid}/${uuidv4()}`);
-        const response = await uploadString(fileRef, attachment, "data_url");
-        console.log(response)
-        // try {
-        //     await addDoc(collection(dbService, "nweets"), {
-        //         text: nweet,
-        //         createdAt: Date.now(),
-        //         creatorId: userObj.uid,
-        //     });
-        // } catch (error) {
-        //     console.error("Error adding document:", error)
-        // }
-        // setNweet("")
+        event.preventDefault();
+        let attachmentUrl = ""
+        if (attachment !== "") {
+            const attachmentRef = ref(storageService, `${userObj.uid}/${uuidv4()}`);
+            const response = await uploadString(attachmentRef, attachment, "data_url");
+            attachmentUrl = await getDownloadURL(response.ref);
+        }
+        const nweetObj = {
+            text: nweet,
+            createdAt: Date.now(),
+            creatorId: userObj.uid,
+            attachmentUrl
+        };
+        try {
+            await addDoc(collection(dbService, "nweets"), nweetObj);
+        } catch (error) {
+            console.error("Error adding document:", error)
+        }
+        setNweet("");
+        setAttachment("");
     }
     const onChange = (event) => {
         const {
