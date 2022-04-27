@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 const Home = ({ userObj }) => {
     const [nweet, setNweet] = useState("");
     const [nweets, setNweets] = useState([]);
-    const [attachment, setAttachment] = useState()
+    const [attachment, setAttachment] = useState("")
     useEffect(() => {
         const q = query(
             collection(dbService, "nweets"),
@@ -26,7 +26,7 @@ const Home = ({ userObj }) => {
     }, []);
     const onSubmit = async (event) => {
         event.preventDefault();
-        let attachmentUrl = ""
+        let attachmentUrl = "";
         if (attachment !== "") {
             const attachmentRef = ref(storageService, `${userObj.uid}/${uuidv4()}`);
             const response = await uploadString(attachmentRef, attachment, "data_url");
