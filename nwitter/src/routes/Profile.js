@@ -4,7 +4,6 @@ import { collection, getDocs, query, where } from "@firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { updateProfile } from "@firebase/auth";
-import { async } from "@firebase/util";
 
 export default ({ userObj, refreshUser }) => {
     const navigate = useNavigate();

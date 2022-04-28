@@ -1,4 +1,3 @@
-// import { initializeApp } from "firebase/app";
 import * as firebase from "firebase/app"
 import "firebase/database"
 import { getAuth } from "firebase/auth";
