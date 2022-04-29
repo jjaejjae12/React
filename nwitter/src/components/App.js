@@ -27,7 +27,16 @@ function App() {
   }, [])
   return (
     <>
-      {init ? <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} setUserObj={setUserObj} refreshUser={refreshUser} /> : "Initializing..."}
+      {init ? (
+        <AppRouter
+          isLoggedIn={isLoggedIn}
+          userObj={userObj}
+          setUserObj={setUserObj}
+          refreshUser={refreshUser}
+        />
+      ) : (
+        "Initializing..."
+      )}
     </>
   )
 }
